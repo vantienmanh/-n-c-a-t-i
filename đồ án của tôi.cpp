@@ -387,32 +387,25 @@ bool sapxep(Nhanvien& a, Nhanvien& b)
 int main()
 {
 	cout << " CHAO MUNG DEN VOI DANH SACH QUAN LY NHAN VIEN : " << endl;
-	double password[3] = { 1,2,3 };
-	double password1[3];
-	double password2[4] = { 1,2,3,4 };
-	double password3[4];
+	int password = 123;
+	double password1;
+	double password2 = 1234;
+	double password3;
 	Nhanvien employes[100];
 	int m = 3; //Số nhân viên có sẵn 
 	int n = 0;
 	cout << " DANG NHAP TK QUAN LY ." << endl;
 	while (true)
 	{
-		cout << "NHAP PASSWORD : " << endl;
-		for (int i = 0; i < 3; i++)
-		{
-			cout << " so thu " << i + 1 << " :";
-			cin >> password1[i];
-		}
+		cout << "NHAP PASSWORD : ";
+		cin >> password1;
 		cout << endl;
 		bool giongnhau = true;
-		for (int i = 0; i < 3; i++)
+		if (password != password1)
 		{
-			if (password[i] != password1[i])
-			{
-				giongnhau = false;
-				break;
-			}
+			giongnhau = false;
 		}
+
 		if (giongnhau == true)
 		{
 			cout << " PASSWORD CHINH XAC ." << endl;
@@ -827,27 +820,24 @@ int main()
 		{
 			cout << " Nhap sai password , xin vui long nhap lai. " << endl;
 		}
+
 	}
+
 
 	cout << "DANG NHAP TK NHAN VIEN . " << endl;
 	while (true)
 	{
-		cout << "NHAP PASSWORD : " << endl;
-		for (int i = 0; i < 3; i++)
-		{
-			cout << " so thu " << i + 1 << " :";
-			cin >> password3[i];
-		}
+		cout << "NHAP PASSWORD : ";
+		cin >> password3;
+
 		cout << endl;
 		bool giongnhau = true;
-		for (int i = 0; i < 3; i++)
+		if (password3 != password2)
 		{
-			if (password3[i] != password2[i])
-			{
-				giongnhau = false;
-				break;
-			}
+			giongnhau = false;
+
 		}
+
 		if (giongnhau == true)
 		{
 			cout << " Password chinh xac. " << endl;
@@ -885,9 +875,8 @@ int main()
 		}
 		else
 		{
-			cout << "Nhap sai password , xin vui long nhap lai.";
+			cout << "Nhap sai password , xin vui long nhap lai." << endl;
 		}
 	}
-	return 0;
 }
 
