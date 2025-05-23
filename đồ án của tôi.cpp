@@ -2,7 +2,7 @@
 #include <string>
 #include <algorithm>
 using namespace std;
-class Nhanvien
+class Nhanvien //tersest 
 {
 private:
 	string hoten, email, chucvu;
